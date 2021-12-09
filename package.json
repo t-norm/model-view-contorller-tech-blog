@@ -1,0 +1,31 @@
+{
+  "name": "model-view-contorller-tech-blog",
+  "version": "1.0.0",
+  "description": "CMS-style blog",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t-norm/model-view-contorller-tech-blog.git"
+  },
+  "keywords": [],
+  "author": "t-norm",
+  "license": "GNUP3.0",
+  "bugs": {
+    "url": "https://github.com/t-norm/model-view-contorller-tech-blog/issues"
+  },
+  "homepage": "https://github.com/t-norm/model-view-contorller-tech-blog#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.2",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^6.0.2",
+    "express-session": "^1.17.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.12.0-beta.1"
+  }
+}
