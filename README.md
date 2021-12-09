@@ -1,6 +1,6 @@
 # <h1 align="center">Model-View-Controller Tech Blog</h1>
 
-<p align="center"><img src="https://img.shields.io/badge/License-GNUP3.0-blue?style=plastic" /></p>
+<p align="center"><img src="https://img.shields.io/badge/License-GNU%20GPLv3-blue?style=plastic" /></p>
 <p align="center">
     <img src="https://img.shields.io/badge/Skillset-Full%20Stack%20Dev-blue?style=plastic" />
     <img src="https://img.shields.io/badge/Skillset-MVC-blue?style=plastic" />
