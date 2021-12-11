@@ -1,0 +1,25 @@
+{{> nav }}
+<div id="single-post-container">
+    <div id="post-title-container">
+        <div id="post-title">{{post.title}}</div>
+        <div id="post-info">Posted by {{post.user.username}} on {{format_date post.createdAt}}</div>
+    </div>
+    <div id="post-content">{{post.content}}</div>
+{{#each post.comments}}
+    <div id="comment-container">
+        <div id="comment-content">{{content}}</div>
+        <div id="comment-info">Comment by {{user.username}} on {{format_date createdAt}}</div>
+    </div>
+{{/each}}
+</div>
+{{#if loggedIn}}
+<form id="comment-form">
+    <textarea id="comment" placeholder="Comment"></textarea>
+    <button type="submit" id="comment-btn">Comment</button>
+</form>
+<script src="/javascript/logout.js"></script>
+<script src="/javascript/dashboard.js"></script>
+<script src='/javascript/create-comment.js'></script>
+{{else}} 
+<script src="/javascript/login.js"></script>
+{{/if}}

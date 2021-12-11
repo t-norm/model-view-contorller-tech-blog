@@ -1,0 +1,11 @@
+{{> nav }}
+<h1 id="header">Dashboard</h1>
+{{#each posts as |post|}}
+{{> dashboard-posts }}
+{{/each}}
+<div id="post-btn-container">
+<button id="post-btn">Create New Post</button>
+</div>
+
+<script src="/javascript/logout.js"></script>
+<script src="/javascript/post.js"></script>

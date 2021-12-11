@@ -1,0 +1,18 @@
+<header>
+    <nav>
+        <h1 id="logo-btn">The Tech Blog</h1>
+        <div id="button-container">
+            {{#if loggedIn}}
+            {{#unless dashboard}}
+            <button id="dashboard-btn">Dashboard</button>
+            {{/unless}}
+            <button id="logout-btn">Logout</button>
+            {{else}}
+            {{#if home}}
+            <button id="login-btn">Login</button>
+            <button id="signup-btn">Sign Up</button>
+            {{/if}}
+            {{/if}}
+        </div>
+    </nav>
+</header>
