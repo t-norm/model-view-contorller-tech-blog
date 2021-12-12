@@ -1,5 +1,7 @@
 const express = require ('express');
+var favicon = require('serve-favicon');
 const session = require('express-session');
+var path = require('path');
 const exphbs = require('express-handlebars');
 const sequelize = require('./config/connection');
 const path = require('path');
