@@ -15,29 +15,29 @@ router.post('/login', async (req, res) => {
             where: { username: req.body.username }
         });
         if (!response) {
-            res.status(404).json({ message: 'No user found with that username!' });
+            res.status(404);
             return;
         }
         const validPassword = response.checkPassword(req.body.password);
         if (!validPassword) {
-            res.status(404).json({ message: 'No user found with that password!' });
+            res.status(404);
             return;
         }
         req.session.save(() => {
             req.session.username = response.username;
             req.session.user_id = response.id;
             req.session.loggedIn = true;
-            res.json(response);
+            res.json({ user: response.username, message: 'You are now logged in!'  });;
         })   
     }
     catch (err) {
-        res.status(500).json(err);
-    };
+        res.status(500);
+    }
 });
 
 router.post('/signup', async (req, res) => {
     try {
-        const response = User.create({
+        const response = await User.create({
             username: req.body.username,
             password: req.body.password
         });
@@ -45,11 +45,11 @@ router.post('/signup', async (req, res) => {
             req.session.username = response.username;
             req.session.user_id = response.id;
             req.session.loggedIn = true;
+            res.json(response);
         });
-        res.json(response);
     }
     catch (err) {
-        res.status(500).json(err);
+        res.status(500);
     };
 });
 

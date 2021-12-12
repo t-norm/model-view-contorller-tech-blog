@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const auth = require('../utils/auth');
 const { User, Comment } = require('../models');
 
 router.get('/', async (req, res) => {
@@ -10,7 +11,7 @@ router.get('/', async (req, res) => {
         res.json(response);
     }
     catch (err) {
-        res.status(500).json(err);
+        res.status(500);
     }
 });
 
@@ -24,11 +25,11 @@ router.get('/:id', async (req, res) => {
         res.json(response);
     }
     catch (err) {
-        res.status(500).json(err);
+        res.status(500);
     }
 });
 
-router.post('/', async (req, res) => {
+router.post('/', auth, async (req, res) => {
     try {
         const response = await Comment.create({
             content: req.body.content,
@@ -38,7 +39,7 @@ router.post('/', async (req, res) => {
         res.json(response);
     }
     catch (err) {
-        res.status(500).json(err);
+        res.status(500);
     }
 });
 

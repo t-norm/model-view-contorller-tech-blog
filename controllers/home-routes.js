@@ -7,13 +7,14 @@ router.get('/', async (req, res) => {
             attributes: ['id', 'title', 'content', 'user_id', 'createdAt'],
             include: [
                 { model: User, attributes: ['username'] }, 
-                { model: Comment, include: { model: User } }]
+                { model: Comment, include: { model: User } }],
+            order: [['id', 'DESC']]
         });
         const posts = response.map(post => post.get({ plain: true }));
         res.render('homepage', { posts, loggedIn: req.session.loggedIn, home: true });
     }
     catch (err) {
-        res.status(500).json(err);
+        res.status(500);
     };
 });
 
