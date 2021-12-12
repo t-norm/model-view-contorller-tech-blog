@@ -1,0 +1,180 @@
+:root {
+    --pri: #000000;
+    --sec: #334931;
+    --tert: #47a03f;
+    --quat: rgb(0, 255, 0);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--pri);
+    color: var(--tert);
+    font-family: 'Share Tech Mono', monospace;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--pri);
+    box-shadow: 10px 1px 15px black;
+}
+
+nav h1 {
+    color: var(--quat);
+    cursor: pointer;
+}
+
+nav h1:hover {
+    color: var(--quat);
+}
+
+#button-container {
+    display: flex;
+}
+
+button {
+    padding: 5px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--tert);
+    color: var(--pri);
+    box-shadow: 5px 5px 3px;
+}
+
+button:hover {
+    background-color: var(--quat);
+}
+
+#post-container, #single-post-container {
+    background-color: var(--pri);
+    margin: 20px auto;
+    border: 1px solid var(--sec);
+    border-radius: 2px;
+    width: 85%;
+}
+
+#post-title {
+    text-decoration: none;
+    padding: 5px 0;
+    color: var(--tert);
+    font-size: 22px;
+}
+
+#post-title-container {
+    background-color: var(--pri);
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#post-content {
+    padding: 5px;
+    font-size: 18px;
+}
+
+#post-container #post-title:hover {
+    color: var(--tert);
+}
+
+#post-info {
+    color: var(--tert);
+    margin: 2px;
+    font-style: italic;
+    font-size: 12px;
+    text-align: right;
+}
+
+#post-btn-container, #dash-btn-container {
+    text-align: center;
+}
+
+#edit-btn, #delete-btn, #create-btn, #update-btn, #post-btn, .form-btn {
+    padding: 15px;
+}
+
+#header, #header {
+    margin: 15px;
+    text-align: center;
+}
+
+#comment-container {
+    background-color: var(--pri);
+    margin: 10px auto;
+    padding: 5px;
+    border: 1px solid var(--sec);
+    border-radius: 5px;
+    width: 95%;
+}
+
+#comment-content {
+    margin: 5px;
+}
+
+#comment-info {
+    text-align: right;
+    font-style: italic;
+    font-size: 12px;
+}
+
+#comment-form {
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+}
+
+#comment-form #comment {
+    height: 50px;
+    padding: 5px;
+    background-color: var(--tert);
+}
+
+#comment-btn {
+    margin: 10px auto;
+    width: 50%;
+}
+
+#post-form label {
+    padding: 3px;
+}
+
+#post-form input, #login-form input, #signup-form input {
+    padding: 3px;
+}
+
+#post-form #content {
+    padding: 5px;
+    height: 75px;
+}
+
+#update-btn, #create-btn, .form-btn {
+    margin: 10px auto;
+    width: 25%;
+}
+
+#no-account {
+    text-align: center;
+}
+
+#login-form, #signup-form, #post-form {
+    margin: 10px auto;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    background-color: var(--pri);
+    border-radius: 2px;
+    border: 1px solid var(--sec)
+}
