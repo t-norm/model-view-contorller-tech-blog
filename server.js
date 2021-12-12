@@ -25,6 +25,7 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(favicon(path.join(__dirname,'public','images','favicon.ico')));
 app.use(require('./controllers'));
 
 sequelize.sync({ force: false }).then(() => {
