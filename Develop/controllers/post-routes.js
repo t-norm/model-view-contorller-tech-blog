@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const withAuth = require('../utils/auth');
+const auth = require('../utils/auth');
 const { Post, User, Comment } = require('../models');
 
 router.get('/', async (req, res) => {
@@ -18,11 +18,11 @@ router.get('/', async (req, res) => {
     };
 });
 
-router.get('/create', withAuth, (req, res) => {
+router.get('/create', auth, (req, res) => {
     res.render('create-post', { loggedIn: true }); 
 });
 
-router.get('/update/:id', withAuth, async (req, res) => {
+router.get('/update/:id', auth, async (req, res) => {
     try {
         const response = await Post.findOne({
             where: { id: req.params.id },
