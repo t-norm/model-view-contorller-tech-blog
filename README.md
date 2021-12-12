@@ -1,4 +1,5 @@
 # <h1 align="center">Model-View-Controller Tech Blog</h1>
+<p>Check installation section for deployment link</p>
 
 <p align="center"><img src="https://img.shields.io/badge/License-GNU%20GPLv3-blue?style=plastic" /></p>
 <p align="center">
@@ -25,7 +26,7 @@ CMS-style tech blog using Model-View-Controller paradigm
 - [Questions](#questions)
 
 # Installation:
-App is deployed at: LINK TO BE PLACED HERE IN THE FUTURE
+App is deployed at: https://t-norm-tech-blog.herokuapp.com/
 
 # Usage:
 Intended to show skill with full stack development, handlebars, express, sequelize, and overall MVC paradigm
